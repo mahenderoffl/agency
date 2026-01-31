@@ -1,0 +1,5 @@
+/*
+  Netlify _redirects file for SPA routing
+  This ensures all routes are served by index.html
+*/
+/*    /index.html   200
