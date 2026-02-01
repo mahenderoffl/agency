@@ -1,206 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WaveSeed Growth — Launch</title>
-  <meta name="description" content="WaveSeed Growth — AI-powered growth systems for predictable revenue." />
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --bg: #000000;
-      --fg: #ffffff;
-      --muted: #9ca3af;
-      --cyan: #22d3ee;
-      --green: #22c55e;
-      --yellow: #facc15;
-      --card: rgba(255,255,255,0.05);
-      --border: rgba(255,255,255,0.1);
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg);
-      color: var(--fg);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 24px;
-    }
-
-    .container {
-      max-width: 1100px;
-      width: 100%;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      font-weight: 900;
-      letter-spacing: -0.03em;
-    }
-
-    .accent { color: var(--cyan); }
-
-    .subtitle {
-      margin-top: 20px;
-      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-      color: #d1d5db;
-    }
-
-    .tagline {
-      margin-top: 12px;
-      color: var(--muted);
-    }
-
-    .cards {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      margin-top: 48px;
-      flex-wrap: wrap;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 20px 24px;
-      min-width: 110px;
-    }
-
-    .card .value {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--cyan);
-    }
-
-    .card .label {
-      margin-top: 6px;
-      font-size: 0.7rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .message {
-      margin-top: 48px;
-      max-width: 640px;
-      margin-left: auto;
-      margin-right: auto;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .cta {
-      margin-top: 32px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 14px 36px;
-      border-radius: 999px;
-      background: var(--cyan);
-      color: #000;
-      font-weight: 700;
-      text-decoration: none;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-
-    .button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(34,211,238,0.3);
-    }
-
-    .metrics {
-      margin-top: 80px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-    }
-
-    footer {
-      margin-top: 80px;
-      font-size: 0.75rem;
-      color: #6b7280;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaveSeed Growth - AI-Powered Growth Systems</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="headline">
+                    <span class="brand">WaveSeed</span>
+                    <span class="growth">Growth</span>
+                </h1>
+                <p class="tagline">AI-Powered Growth Systems for Predictable Revenue</p>
+            </div>
+            <div class="background-gradient"></div>
+        </section>
 
-<div class="container">
-  <h1>WaveSeed <span class="accent">Growth</span></h1>
-  <p class="subtitle">AI-Powered Growth Systems for Predictable Revenue</p>
-  <p class="tagline">Strategy • Traffic • Automation • Booked Calls • Scale</p>
+        <section class="countdown">
+            <div class="countdown-container">
+                <h2 class="countdown-title">Launch Sequence Initiated</h2>
+                <div class="timer">
+                    <div class="time-unit">
+                        <div class="number" id="days">00</div>
+                        <div class="label">Days</div>
+                    </div>
+                    <div class="separator">:</div>
+                    <div class="time-unit">
+                        <div class="number" id="hours">00</div>
+                        <div class="label">Hours</div>
+                    </div>
+                    <div class="separator">:</div>
+                    <div class="time-unit">
+                        <div class="number" id="minutes">00</div>
+                        <div class="label">Minutes</div>
+                    </div>
+                    <div class="separator">:</div>
+                    <div class="time-unit">
+                        <div class="number" id="seconds">00</div>
+                        <div class="label">Seconds</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <div id="dynamic"></div>
+        <section class="metrics">
+            <div class="metrics-container">
+                <div class="metric">
+                    <div class="metric-number">120+</div>
+                    <div class="metric-label">Funnels Built</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number">300+</div>
+                    <div class="metric-label">Automations Deployed</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number">4.2×</div>
+                    <div class="metric-label">Average ROI</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number">7</div>
+                    <div class="metric-label">Markets Served</div>
+                </div>
+            </div>
+        </section>
 
-  <div class="metrics">
-    <div class="card"><div class="value">120+</div><div class="label">Funnels</div></div>
-    <div class="card"><div class="value">300+</div><div class="label">Automations</div></div>
-    <div class="card"><div class="value">4.2×</div><div class="label">Avg ROI</div></div>
-    <div class="card"><div class="value">7</div><div class="label">Markets</div></div>
-  </div>
+        <section class="positioning">
+            <div class="positioning-container">
+                <p class="positioning-text">
+                    WaveSeed Growth operates like a growth lab — not a traditional agency.
+                    We build productized systems that scale predictably, focusing on long-term
+                    revenue optimization through AI-driven automation and data-driven strategies.
+                </p>
+            </div>
+        </section>
+    </main>
 
-  <div class="message">
-    WaveSeed Growth operates like a growth lab — not a traditional agency. We build end-to-end AI-driven systems that attract, qualify, follow up, and convert leads automatically.
-  </div>
-
-  <footer>
-    Temporary launch page • agency.waveseed.app<br />
-    Final launch • February 10
-  </footer>
-</div>
-
-<script>
-  const PRE = new Date('2026-02-03T00:00:00').getTime();
-  const RELAUNCH = new Date('2026-02-05T00:00:00').getTime();
-  const FINAL = new Date('2026-02-10T00:00:00').getTime();
-
-  const el = document.getElementById('dynamic');
-
-  function renderCountdown(target) {
-    const now = Date.now();
-    const diff = target - now;
-    if (diff <= 0) return '';
-
-    const d = Math.floor(diff / 86400000);
-    const h = Math.floor((diff / 3600000) % 24);
-    const m = Math.floor((diff / 60000) % 60);
-    const s = Math.floor((diff / 1000) % 60);
-
-    return `
-      <div class="cards">
-        <div class="card"><div class="value">${d}</div><div class="label">Days</div></div>
-        <div class="card"><div class="value">${h}</div><div class="label">Hours</div></div>
-        <div class="card"><div class="value">${m}</div><div class="label">Minutes</div></div>
-        <div class="card"><div class="value">${s}</div><div class="label">Seconds</div></div>
-      </div>`;
-  }
-
-  function update() {
-    const now = Date.now();
-
-    if (now < PRE) {
-      el.innerHTML = renderCountdown(PRE);
-    } else if (now >= PRE && now < RELAUNCH) {
-      el.innerHTML = '<p class="message"><strong style="color:#facc15">⚙️ System upgrade in progress</strong><br/>Critical infrastructure upgrades are underway to ensure a high-performance launch.</p>';
-    } else if (now >= RELAUNCH && now < FINAL) {
-      el.innerHTML = renderCountdown(FINAL);
-    } else {
-      el.innerHTML = '<div class="cta"><a class="button" href="https://growth.waveseed.app">🚀 Visit Main Website</a></div>';
-    }
-  }
-
-  setInterval(update, 1000);
-  update();
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,306 @@
+/* Professional startup-grade CSS for WaveSeed Growth */
+/* Focus: Clean, restrained, credible design */
+
+:root {
+  --bg-primary: #0b0d10;
+  --bg-secondary: #060708;
+  --text-primary: #f8fafc;
+  --text-muted: #94a3b8;
+  --accent: #0ea5e9;
+  --accent-subtle: rgba(14, 165, 233, 0.1);
+  --border: rgba(255, 255, 255, 0.08);
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  color: var(--text-primary);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+main {
+  min-height: 100vh;
+}
+
+/* Hero Section - Confident, cinematic entry */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.headline {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroEnter 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+@keyframes heroEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.brand {
+  display: block;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.growth {
+  display: block;
+  color: var(--accent);
+  margin-top: 0.2em;
+}
+
+.tagline {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: var(--text-muted);
+  font-weight: 400;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: taglineEnter 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+}
+
+@keyframes taglineEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.background-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 40%, var(--accent-subtle) 0%, transparent 50%),
+              radial-gradient(circle at 70% 60%, var(--accent-subtle) 0%, transparent 50%);
+  opacity: 0.3;
+  animation: gradientDrift 20s ease-in-out infinite alternate;
+}
+
+@keyframes gradientDrift {
+  0% { transform: translateX(-5px) translateY(-5px); }
+  100% { transform: translateX(5px) translateY(5px); }
+}
+
+/* Countdown Section - Precise engineering */
+.countdown {
+  padding: 8rem 2rem;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.countdown-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.countdown-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 3rem;
+  letter-spacing: -0.02em;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.time-unit {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  min-width: 120px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.number {
+  font-size: 3rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.separator {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+/* Metrics Section - Data-driven authority */
+.metrics {
+  padding: 8rem 2rem;
+  background: var(--bg-primary);
+}
+
+.metrics-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+.metric {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: metricEnter 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.metric:nth-child(1) { animation-delay: 0.1s; }
+.metric:nth-child(2) { animation-delay: 0.2s; }
+.metric:nth-child(3) { animation-delay: 0.3s; }
+.metric:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes metricEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.metric:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px var(--shadow);
+}
+
+.metric-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.metric-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Positioning Section - Credible messaging */
+.positioning {
+  padding: 8rem 2rem;
+  background: var(--bg-secondary);
+}
+
+.positioning-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.positioning-text {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  line-height: 1.6;
+  color: var(--text-muted);
+  font-weight: 400;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: textReveal 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+@keyframes textReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 0 1rem;
+  }
+
+  .headline {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+
+  .timer {
+    gap: 0.5rem;
+  }
+
+  .time-unit {
+    min-width: 80px;
+    padding: 1.5rem 1rem;
+  }
+
+  .number {
+    font-size: 2rem;
+  }
+
+  .metrics-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .countdown,
+  .metrics,
+  .positioning {
+    padding: 4rem 1rem;
+  }
+}
