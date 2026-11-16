@@ -1,0 +1,121 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 24px 32px;
+    background: rgba(10, 25, 41, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    border-radius: 16px;
+}
+
+.unitWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+}
+
+.value {
+    font-family: var(--font-mono, 'JetBrains Mono', monospace);
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: 600;
+    color: #00E5FF;
+    line-height: 1;
+    text-shadow: 0 0 30px rgba(0, 229, 255, 0.5);
+}
+
+.label {
+    font-family: var(--font-body, 'Inter', sans-serif);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 8px;
+}
+
+.separator {
+    font-family: var(--font-mono, 'JetBrains Mono', monospace);
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 600;
+    color: rgba(0, 229, 255, 0.5);
+    padding: 0 8px;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+.liveContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.liveBadge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 32px;
+    background: linear-gradient(90deg, rgba(0, 255, 136, 0.2) 0%, rgba(0, 229, 255, 0.2) 100%);
+    border: 1px solid rgba(0, 255, 136, 0.5);
+    border-radius: 50px;
+    font-family: var(--font-display, 'Space Grotesk', sans-serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #00FF88;
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+.liveDot {
+    width: 12px;
+    height: 12px;
+    background: #00FF88;
+    border-radius: 50%;
+    animation: blink 1.5s ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.8);
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+    .container {
+        padding: 16px 20px;
+        gap: 4px;
+    }
+
+    .unit {
+        min-width: 60px;
+    }
+
+    .separator {
+        padding: 0 4px;
+    }
+}
