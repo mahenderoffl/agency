@@ -1,0 +1,116 @@
+.services {
+    padding: 120px 24px;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 102, 255, 0.05) 50%, transparent 100%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.title {
+    font-family: var(--font-display, 'Space Grotesk', sans-serif);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0 0 16px 0;
+}
+
+.subtitle {
+    font-family: var(--font-body, 'Inter', sans-serif);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background: rgba(10, 25, 41, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 229, 255, 0.1);
+    border-radius: 16px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: rgba(0, 229, 255, 0.3);
+}
+
+.iconWrapper {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.2) 0%, rgba(0, 229, 255, 0.2) 100%);
+    border-radius: 12px;
+    color: #00E5FF;
+}
+
+.cardTitle {
+    font-family: var(--font-display, 'Space Grotesk', sans-serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.cardDescription {
+    font-family: var(--font-body, 'Inter', sans-serif);
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.learnMore {
+    text-align: center;
+    margin-top: 48px;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.learnMore a {
+    color: #00E5FF;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.learnMore a:hover {
+    border-color: #00E5FF;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .services {
+        padding: 80px 16px;
+    }
+
+    .header {
+        margin-bottom: 40px;
+    }
+
+    .grid {
+        gap: 16px;
+    }
+
+    .card {
+        padding: 24px;
+    }
+}
